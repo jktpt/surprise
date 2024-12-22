@@ -1,0 +1,138 @@
+/* เริ่มจาก ซองจดหมาย */
+.envelope-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #753030;
+    cursor: pointer;
+    transition: all 1s ease-in-out;
+    overflow: hidden;
+    z-index: 2; /* ตั้งค่า z-index ให้สูงกว่า slideshow-container เพื่อให้ซองจดหมายแสดงก่อน */
+}
+
+/* เมื่อซองจดหมายถูกฉีก */
+.envelope-container.torn {
+    transform: scale(0) rotate(-45deg);
+    opacity: 0;
+}
+
+/* ซองจดหมาย */
+.envelope {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/* ซองจดหมายเมื่อฉีก */
+.envelope .flap {
+    position: absolute;
+    top: -50%;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: #ccc;
+    border-bottom: 2px solid #999;
+    transform-origin: bottom;
+    transition: transform 0.5s ease-in-out;
+}
+
+.envelope-container.torn .flap {
+    transform: rotateX(180deg);
+}
+
+.envelope .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.envelope .content p {
+    margin: 0 0 10px;
+}
+
+.envelope-design {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #ffcbcb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.envelope-design .stamp {
+    font-size: 1.5rem;
+}
+
+.envelope-design .border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px dashed #999;
+    border-radius: 50%;
+}
+
+/* ส่วนที่ปรับปรุงสำหรับการแสดงสไลด์โชว์ */
+.slideshow-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1; /* ซ้อนทับลงไปหลังจากซองจดหมาย */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* ขนาดของ Slide */
+.slide {
+    position: relative;
+    width: 390px; /* ขนาดของ iPhone 14 */
+    height: 844px; /* ขนาดของ iPhone 14 */
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.5s ease-in-out;
+    border-radius: 20px; /* ให้ภาพดูโค้งมน */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* เพิ่มเงา */
+}
+
+.caption {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    padding: 10px 20px; /* ขนาดของกล่อง */
+    border-radius: 10px; /* ให้ขอบโค้งมน */
+    background-color: rgba(0, 0, 0, 0.6); /* สีพื้นหลังโปร่งแสง */
+    backdrop-filter: blur(10px); /* ทำให้พื้นหลังเบลอ */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* เพิ่มเงาให้กับกล่อง */
+    max-width: 100%; /* กำหนดขนาดสูงสุดของแคปชั่น */
+    word-wrap: break-word; /* ให้ข้อความแตกบรรทัดถ้าจำเป็น */
+    width: 300px;
+}
