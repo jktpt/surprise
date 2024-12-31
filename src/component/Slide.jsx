@@ -36,7 +36,7 @@ const Slideshow = () => {
     {
       id: 1,
       image:
-        "https://previews.dropbox.com/p/thumb/ACjzJ-gRxRKuLkw2fW1_FqqFVQ59IxiinFRak3V4HWFh2q3JJWEsFUymP8TseavolAfpvnmDQktLZbKwzdnAFQFvsUpMzbMdvUlKOE1Ug50BZ71nxecWMD_SJtZoEPzWh_X2f9aI3eikuK1-O3csfxhiQvlbGHUOBo_L0vRpsu18dcB6sNIbcuVf49mAHMFFi7sxzNGKb6bKyovRiIislYYXqmwSCmrt6aTEymhJKH9qsfD_hCfoYobTe3KrynQ9b3iEG60A80aIHEnuUC-V6PsMEblBkRmvSqRXy-k9k-KQQPHX0y6FzOmrmacTHu1gZxM/p.jpeg",
+        "https://img2.pic.in.th/pic/IMG_10.jpg",
       caption:
         "สวัสดีค้าบชาวโลก🎄 ปีใหม่อีกแล้ววว ปีนี้ก็เป็นปี 2567 ก็ขอบคุณที่อยู่ด้วยกันมาตลอด 5-6 ปีนะค้าบ👩‍🦰🧑",
     },
